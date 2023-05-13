@@ -36,7 +36,7 @@ echo "installing transformers..."
 python3 -m pip install --quiet --progress-bar on transformers 2>&1
 
 echo "downloading script..."
-wget -q -O train.py -P "https://raw.githubusercontent.com/fakerybakery/gpt2-finetune-gpu-cpu-mps-cuda/main/main.py"
+wget --show-progress --progress=dot -q -O train.py -P "https://raw.githubusercontent.com/fakerybakery/gpt2-finetune-gpu-cpu-mps-cuda/main/main.py"
 
 echo "starting trainer..."
 python3 train.py
