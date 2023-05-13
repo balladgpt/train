@@ -28,12 +28,12 @@ if pip3 show torch >/dev/null; then
     echo "[OK] pytorch is installed."
 else
     echo "[ALERT] pytorch is not installed. attempting to install..."
-    python3 -m pip install --quiet --progress-bar pytorch 2>&1
+    python3 -m pip install --quiet --progress-bar on pytorch 2>&1
 fi
 
 
 echo "installing transformers..."
-python3 -m pip install --quiet --progress-bar transformers 2>&1
+python3 -m pip install --quiet --progress-bar on transformers 2>&1
 
 echo "downloading script..."
 wget -q -O train.py -P "https://raw.githubusercontent.com/fakerybakery/gpt2-finetune-gpu-cpu-mps-cuda/main/main.py"
